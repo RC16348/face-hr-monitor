@@ -11,7 +11,6 @@
 - **AI 健康建议** — 通过 Agnes AI API（agnes-2.0-flash）生成个性化健康解读
 - **可视化报告** — BVP 波形、滤波信号、波峰标记、FFT 频谱三合一图表，支持深色主题
 - **交互式采集流程** — 开始/暂停/继续/重置采集，圆形进度指示器
-- **一键打包** — 支持 PyInstaller 打包为独立 exe
 
 ## 工作流程
 
@@ -80,17 +79,6 @@ python main.py
 5. **查看结果** — 展示 BPM、LF/HF 等指标，三合一图表（BVP 原始波形、滤波+波峰、FFT 频谱）
 6. **AI 建议** — 自动生成个性化健康解读
 
-## 打包为 exe
-
-项目已预配 PyInstaller 打包配置，可一键生成独立可执行文件：
-
-```bash
-pip install pyinstaller
-pyinstaller FaceHRMonitor.spec
-```
-
-打包产物位于 `dist/FaceHRMonitor.exe`，无需 Python 环境即可运行。
-
 ## 项目结构
 
 ```
@@ -98,7 +86,6 @@ face-hr-monitor/
 ├── main.py                  # 入口
 ├── agnes_client.py          # Agnes AI API 客户端
 ├── requirements.txt
-├── FaceHRMonitor.spec       # PyInstaller 打包配置
 ├── README.md
 ├── models/                  # ONNX 模型
 │   ├── yolov8n-face.onnx    # 人脸检测（yolo-face）
@@ -116,10 +103,7 @@ face-hr-monitor/
 │   ├── main_window.py       # 主窗口 + 多线程 Workers
 │   ├── camera_widget.py     # 摄像头画面绘制（OpenCV → QPainter）
 │   └── result_widget.py     # 结果展示（matplotlib 图表 + 指标卡片）
-├── output/                  # 输出目录
-├── build/                   # PyInstaller 构建缓存
-└── dist/                    # 打包输出
-    └── FaceHRMonitor.exe
+└── output/                  # 输出目录
 ```
 
 ## 技术细节
@@ -155,10 +139,6 @@ face-hr-monitor/
 - **InferenceWorker**（QThread）— FacePhys BVP 推理 + HRV 分析
 - **AdviceWorker**（QThread）— Agnes AI API 调用获取建议
 - 主线程仅负责 UI 渲染和信号响应
-
-### 打包优化
-
-FaceHRMonitor.spec 已排除大量冗余 PySide6 / matplotlib / Pillow 模块，显著减小 exe 体积。
 
 ## License
 
