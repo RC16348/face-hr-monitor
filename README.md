@@ -70,6 +70,10 @@ DEFAULT_API_KEY = "你的密钥"  # → 替换为真实密钥
 python main.py
 ```
 
+## 截图
+
+![运行截图](figs/screenshot.png)
+
 ## 使用
 
 1. **启动** — 应用打开后自动启动摄像头，画面显示实时人脸检测
