@@ -8,10 +8,6 @@ build/
 *.spec
 *.exe
 
-# Project specific
-output/*
-!output/.gitkeep
-
 # IDE
 .vscode/
 .idea/

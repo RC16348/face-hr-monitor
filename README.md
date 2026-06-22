@@ -107,7 +107,7 @@ face-hr-monitor/
 │   ├── main_window.py       # 主窗口 + 多线程 Workers
 │   ├── camera_widget.py     # 摄像头画面绘制（OpenCV → QPainter）
 │   └── result_widget.py     # 结果展示（matplotlib 图表 + 指标卡片）
-└── output/                  # 输出目录
+
 ```
 
 ## 技术细节
