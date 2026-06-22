@@ -160,18 +160,6 @@ face-hr-monitor/
 
 FaceHRMonitor.spec 已排除大量冗余 PySide6 / matplotlib / Pillow 模块，显著减小 exe 体积。
 
-## 引用
-
-```bibtex
-@article{wang2025facephys,
-  title     = {FacePhys: State of the Heart Learning},
-  author    = {Wang, Kegang and Tang, Jian and Wang, Yuntao and Liu, Xin
-               and Fan, Yelin and Ji, Jiacheng and Shi, Yuanchun and McDuff, Daniel},
-  journal   = {arXiv preprint arXiv:2512.06275},
-  year      = {2025}
-}
-```
-
 ## License
 
 MIT
