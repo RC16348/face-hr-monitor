@@ -37,7 +37,7 @@
 ### 1. 克隆
 
 ```bash
-git clone https://github.com/your/face-hr-monitor.git
+git clone https://github.com/RC16348/face-hr-monitor.git
 cd face-hr-monitor
 ```
 
@@ -164,9 +164,11 @@ FaceHRMonitor.spec 已排除大量冗余 PySide6 / matplotlib / Pillow 模块，
 
 ```bibtex
 @article{wang2025facephys,
-  title={FacePhys: A Lightweight rPPG Algorithm Using State Space Models},
-  author={Wang, Kegang and others},
-  year={2025}
+  title     = {FacePhys: State of the Heart Learning},
+  author    = {Wang, Kegang and Tang, Jian and Wang, Yuntao and Liu, Xin
+               and Fan, Yelin and Ji, Jiacheng and Shi, Yuanchun and McDuff, Daniel},
+  journal   = {arXiv preprint arXiv:2512.06275},
+  year      = {2025}
 }
 ```
 
